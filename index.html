@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#9e302c">
+  <meta name="description" content="مراجعة تفاعلية لمادة السلامة والصحة المهنية: شرح المحاضرات، بنك الأسئلة، واختبارات محفوظة محليًا.">
+  <title>مراجعة السلامة المهنية | OSH</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">تخطَّ إلى المحتوى</a>
+  <header class="site-header">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">OSH</div>
+      <div>
+        <p class="eyebrow">مراجعة قبل الامتحان</p>
+        <h1>السلامة والصحة المهنية</h1>
+      </div>
+    </div>
+    <button class="icon-button" id="themeToggle" type="button" aria-label="تفعيل الوضع الليلي" aria-pressed="false">
+      <span aria-hidden="true" id="themeIcon">☾</span><span class="theme-label">الوضع الليلي</span>
+    </button>
+  </header>
+
+  <nav class="main-nav" aria-label="التنقل الرئيسي">
+    <button type="button" class="nav-button is-current" data-view="dashboard" aria-current="page">الرئيسية</button>
+    <button type="button" class="nav-button" data-view="lessons">الشرح</button>
+    <button type="button" class="nav-button" data-view="study">مذاكرة</button>
+    <button type="button" class="nav-button" data-view="quiz">اختبار</button>
+    <button type="button" class="nav-button" data-view="library">بنك الأسئلة</button>
+    <button type="button" class="nav-button" data-view="sources">المحاضرات الأصلية</button>
+  </nav>
+
+  <main id="mainContent" class="page-shell">
+    <section class="view-panel is-visible" id="view-dashboard" data-view-panel="dashboard" aria-labelledby="dashboardTitle">
+      <div class="page-heading"><div>
+        <p class="eyebrow">خطة المراجعة</p><h2 id="dashboardTitle">راجع الفكرة، ثم اختبر نفسك</h2>
+        <p class="muted">الشرح مبني على المحاضرات الست المرفوعة، وبنك الأسئلة من ملف <span dir="ltr">osh-quiz.html</span>. تقدمك محفوظ على هذا المتصفح.</p>
+      </div></div>
+      <div id="dashboardRoot" class="stack"></div>
+    </section>
+
+    <section class="view-panel" id="view-lessons" data-view-panel="lessons" aria-labelledby="lessonsTitle" hidden>
+      <div class="page-heading"><div>
+        <p class="eyebrow">الشرح البصري</p><h2 id="lessonsTitle">المحاضرات</h2>
+        <p class="muted">ملخصات مراجعة من الشرائح الأصلية، مع روابط مباشرة إلى كل ملف PDF.</p>
+      </div></div>
+      <div class="lesson-tabs" role="tablist" aria-label="اختيار المحاضرة">
+        <button type="button" role="tab" id="tab-l1" aria-controls="l1" aria-selected="true" data-lesson-select="l1">محاضرة 1</button>
+        <button type="button" role="tab" id="tab-l2" aria-controls="l2" aria-selected="false" data-lesson-select="l2">محاضرة 2 · OSHA</button>
+        <button type="button" role="tab" id="tab-l3" aria-controls="l3" aria-selected="false" data-lesson-select="l3">محاضرة 3 · الحريق</button>
+        <button type="button" role="tab" id="tab-l5" aria-controls="l5" aria-selected="false" data-lesson-select="l5">محاضرة 5 · PPE</button>
+        <button type="button" role="tab" id="tab-l6" aria-controls="l6" aria-selected="false" data-lesson-select="l6">محاضرة 6 · مراجعة</button>
+        <button type="button" role="tab" id="tab-loto" aria-controls="loto" aria-selected="false" data-lesson-select="loto">LOTO</button>
+      </div>
+      <div class="lesson-content">
+        <section id="l1" class="lesson-page" role="tabpanel" aria-labelledby="tab-l1">
+          <div class="source-heading"><div><h3>محاضرة 1: من المأساة التاريخية إلى العلم التطبيقي</h3><p>الهدف هو فهم لماذا تحولت السلامة من عبء يُؤجل إلى استثمار يحمي الإنسان والممتلكات والبيئة ويقلل التكلفة.</p></div><a class="source-button" href="sources/lecture-1.pdf" target="_blank" rel="noopener">فتح المحاضرة الأصلية</a></div>
+          <div class="flow" dir="ltr"><span class="node">Monongah 1907</span><span class="arrow">→</span><span class="node">Triangle 1911</span><span class="arrow">→</span><span class="node">OSHA 1970</span><span class="arrow">→</span><span class="node">Integrated safety</span></div>
+          <div class="grid cards-3">
+            <article class="mini-card"><h4>كارثة مونونجاه</h4><p>تذكر الشرائح مقتل 362 عاملًا سنة 1907، وربطها بإنشاء المكتب الأمريكي للمناجم وقوانين التهوية القسرية سنة 1910.</p></article>
+            <article class="mini-card"><h4>حريق ترايانجل</h4><p>146 ضحية سنة 1911 بسبب غلق مخارج الطوارئ؛ وتعرض الشرائح فتح المخارج في اتجاه الخروج وقوانين السلامة اللاحقة.</p></article>
+            <article class="mini-card"><h4>نقطة التحول</h4><p>قانون OSH عام 1970 ثم إنشاء OSHA عام 1971؛ وتعرض المحاضرة انخفاضًا يتجاوز 60% في وفيات وإصابات العمل.</p></article>
+          </div>
+          <h4>تكلفة الحادث ولماذا الوقاية استثمار</h4>
+          <div class="grid cards-2">
+            <article class="callout callout-danger"><strong>التكاليف المباشرة</strong><p>العلاج الطبي والتعويضات القانونية.</p></article>
+            <article class="callout"><strong>التكاليف غير المباشرة</strong><p>توقف الإنتاج، تأخر الطلبات، استنزاف الوقت الإداري والهندسي، تدريب البديل، فقدان الثقة والسمعة. تعرض الشرائح أنها تعادل 4 إلى 10 أضعاف المباشرة.</p></article>
+          </div>
+          <div class="key-note"><strong>معادلة المراجعة:</strong> كل 1$ للوقاية يعطي 4$ إلى 6$ عائدًا أو وفرًا من الخسائر الخفية حسب المحاضرة.</div>
+          <h4>المفاهيم الأساسية</h4>
+          <div class="grid cards-3">
+            <article class="mini-card"><h4>Hazard</h4><p>مصدر يملك القدرة الكامنة على إحداث ضرر، مثل زجاجة HCl المغلقة على الرف.</p></article>
+            <article class="mini-card"><h4>Risk</h4><p>المخاطرة = الاحتمالية × الشدة. تظهر عندما يوجد تعرض واحتمال للضرر.</p></article>
+            <article class="mini-card"><h4>السلامة مقابل الصحة</h4><p>السلامة تركز على الحوادث والإصابات الفورية؛ الصحة المهنية تركز على الأمراض طويلة المدى من التعرض لعوامل ضارة.</p></article>
+          </div>
+          <div class="grid cards-2">
+            <article class="mini-card"><h4>خريطة المخاطر الخمسة</h4><ul><li>كيميائية</li><li>بيولوجية</li><li>فيزيائية</li><li>ميكانيكية</li><li>إرجونوميكس</li></ul></article>
+            <article class="mini-card"><h4>أهداف المنظومة المتكاملة</h4><ul><li>حماية العنصر البشري</li><li>حماية الممتلكات</li><li>بيئة عمل آمنة</li><li>تقليل التكاليف</li></ul></article>
+          </div>
+          <p class="source-note">مرجع الملخص: محاضرة 1، الشرائح 6-18.</p>
+        </section>
+
+        <section id="l2" class="lesson-page" role="tabpanel" aria-labelledby="tab-l2" hidden>
+          <div class="source-heading"><div><h3>محاضرة 2: تشريعات السلامة المهنية وOSHA</h3><p>من قانون ملزم إلى تفتيش ومساءلة وعقوبات؛ المطلوب هو تمييز القاعدة والمسؤولية ودرجة المخالفة.</p></div><a class="source-button" href="sources/lecture-2.pdf" target="_blank" rel="noopener">فتح المحاضرة الأصلية</a></div>
+          <div class="grid cards-2">
+            <article class="mini-card"><h4>ما هي OSHA؟</h4><p>Occupational Safety &amp; Health Administration. تعرض المحاضرة أنها جهة اتحادية مسؤولة عن التشريعات ومتابعة تنفيذها، مع التوعية والتوثيق وتحديد واجبات أصحاب العمل والعاملين.</p></article>
+            <article class="mini-card"><h4>مصادر المواصفات</h4><p>تُعرض مواصفات ANSI وNFPA، ومواصفات CGA، والقوانين الفيدرالية السائدة. تبني OSHA أفضل الممارسات الصناعية وتمنحها قوة القانون الاتحادي الإلزامي.</p></article>
+          </div>
+          <h4>كيف تقرأ كود OSHA؟</h4>
+          <div class="flow" dir="ltr"><span class="node">29 CFR</span><span class="arrow">→</span><span class="node">OSHA</span><span class="arrow">→</span><span class="node">1910 General Industry</span><span class="arrow">→</span><span class="node">Section / Subsection</span></div>
+          <div class="callout"><strong>Horizontal vs Vertical</strong><p>الأفقية تنطبق على صناعات متنوعة، ومثالها مواصفات الصناعة العامة 1910. الرأسية تُطبق على قطاع محدد مثل الإنشاءات 1926 أو الصناعة البحرية والتعدين.</p></div>
+          <div class="grid cards-2">
+            <article class="mini-card"><h4>واجب صاحب العمل</h4><ul><li>بيئة عمل آمنة دون مخاطر جسيمة.</li><li>تطبيق معايير OSHA.</li><li>تقييم المخاطر وتوثيقه.</li><li>توفير معدات الوقاية والتدريب المستمر.</li></ul></article>
+            <article class="mini-card"><h4>واجب العامل</h4><ul><li>اتباع المواصفات واستخدام معدات الوقاية.</li><li>فحص المعدات قبل الاستخدام.</li><li>الحفاظ على النظافة والإبلاغ الفوري عن الخطر.</li></ul></article>
+          </div>
+          <h4>التفتيش والمخالفات</h4>
+          <div class="grid cards-2">
+            <article class="mini-card"><h4>قوة التفتيش</h4><p>تعرض المحاضرة الدخول الفوري لموقع العمل دون إشعار مسبق، فحص الموقع والسجلات، والتعرف على المخاطر وتطبيق المواصفات.</p></article>
+            <article class="mini-card"><h4>سلم الأولوية</h4><p>الخطر الوشيك، ثم الحوادث الجسيمة والوفيات، ثم شكاوى العمال، ثم الفحص المبرمج، ثم التفتيش التتبعي.</p></article>
+          </div>
+          <div class="grid cards-3">
+            <article class="mini-card"><h4>Other than Serious</h4><p>لا يتوقع أن يسبب وفاة أو إصابة جسيمة.</p></article>
+            <article class="mini-card"><h4>Serious</h4><p>احتمال كبير للوفاة أو ضرر جسدي جسيم.</p></article>
+            <article class="mini-card"><h4>Willful</h4><p>يعلم صاحب العمل بالمخالفة ويتعمد عدم تصحيحها. الحد الفاصل في دراسات الحالة هو القرار الإداري.</p></article>
+          </div>
+          <div class="key-note"><strong>General Duty Clause:</strong> في الشرائح يرتبط بتوفير مكان عمل آمن وإزالة المخاطر المعروفة حتى مع غياب مواصفة محددة.</div>
+          <p class="source-note">مرجع الملخص: محاضرة 2، الشرائح 2-20.</p>
+        </section>
+
+        <section id="l3" class="lesson-page" role="tabpanel" aria-labelledby="tab-l3" hidden>
+          <div class="source-heading"><div><h3>محاضرة 3: هندسة مكافحة الحرائق</h3><p>المراجعة تتبع سلسلة واحدة: كيف يبدأ الحريق، كيف نكسر السلسلة، ثم أي مادة إطفاء وطريقة إخلاء تناسب الموقف.</p></div><a class="source-button" href="sources/lecture-3.pdf" target="_blank" rel="noopener">فتح المحاضرة الأصلية</a></div>
+          <h4>نظرية الاشتعال</h4>
+          <div class="flow" dir="ltr"><span class="node danger">Heat</span><span class="node">Oxygen</span><span class="node">Fuel</span><span class="node">Chain reaction</span></div>
+          <div class="grid cards-2">
+            <article class="mini-card"><h4>منطقة الأكسجين</h4><p>الأكسجين الطبيعي 21%. تقل فرصة استمرار الحريق عندما ينخفض عن 16%، وتوضح الشرائح أن الشرارة مع تركيز أعلى من 21% قد تنتج انفجارًا مدمرًا.</p></article>
+            <article class="mini-card"><h4>المادة الأخطر</h4><p>كلما انخفضت درجة حرارة صدور الأبخرة القابلة للاشتعال، زادت سرعة الاشتعال. وتعرض المحاضرة مصادر حرارة منها الاحتكاك الميكانيكي والكهرباء الساكنة والمواد الكيميائية والأسطح الساخنة والتدخين.</p></article>
+          </div>
+          <h4>كيف نكسر سلسلة الحريق؟</h4>
+          <div class="grid cards-2">
+            <article class="mini-card"><h4>التبريد</h4><p>خفض الحرارة لأقل من نقطة الاشتعال؛ يكسر ضلع الحرارة.</p></article>
+            <article class="mini-card"><h4>الخنق</h4><p>عزل الأكسجين حتى يقل عن 16%.</p></article>
+            <article class="mini-card"><h4>التجويع</h4><p>إبعاد المادة القابلة للاشتعال أو فصل مصدر الوقود.</p></article>
+            <article class="mini-card"><h4>كسر السلسلة</h4><p>إيقاف التفاعل الكيميائي المتسلسل بوسيط كيميائي مناسب.</p></article>
+          </div>
+          <h4>تصنيف الحريق ووسيلة الإطفاء</h4>
+          <div class="grid cards-3">
+            <article class="mini-card"><h4>A</h4><p>خشب، ورق، قماش.</p></article><article class="mini-card"><h4>B</h4><p>سوائل قابلة للاشتعال.</p></article><article class="mini-card"><h4>C</h4><p>غازات قابلة للاشتعال مثل البوتاجاز والغاز الطبيعي.</p></article>
+            <article class="mini-card"><h4>D</h4><p>معادن قابلة للاشتعال مثل الماغنسيوم.</p></article><article class="mini-card"><h4>E</h4><p>أجهزة ومعدات موصلة للتيار.</p></article><article class="mini-card"><h4>F / K</h4><p>حرائق الطبخ والزيوت والدهون.</p></article>
+          </div>
+          <div class="callout"><strong>حرائق الكهرباء:</strong> تعرض المحاضرة CO2 للاستخدام المثالي لأنه غاز غير موصل ولا يترك بقايا، وFM200 (Heptafluoropropane) لغرف السيرفرات والمحطات الحساسة.</div>
+          <h4>التنفيذ والإخلاء</h4>
+          <div class="flow" dir="ltr"><span class="node">P: Pull</span><span class="arrow">→</span><span class="node">A: Aim at base</span><span class="arrow">→</span><span class="node">S: Squeeze</span><span class="arrow">→</span><span class="node">S: Sweep</span></div>
+          <p>المسافة الآمنة لا تقل عن 3 أمتار والريح في الظهر. عند الإخلاء: اترك المكان، انبطح عند الدخان، ازحف قريبًا من الأرض، وتجنب المصاعد.</p>
+          <p class="source-note">مرجع الملخص: محاضرة 3، الشرائح 2-18.</p>
+        </section>
+
+        <section id="l5" class="lesson-page" role="tabpanel" aria-labelledby="tab-l5" hidden>
+          <div class="source-heading"><div><h3>محاضرة 5: تسلسل التحكم في المخاطر ومعدات الوقاية الشخصية</h3><p>لا يبدأ التحكم من العامل؛ يبدأ من مصدر الخطر، ثم ينزل تدريجيًا حتى معدات الوقاية كخط دفاع أخير.</p></div><a class="source-button" href="sources/lecture-5.pdf" target="_blank" rel="noopener">فتح المحاضرة الأصلية</a></div>
+          <div class="control-pyramid">
+            <div class="pyramid-level level-1"><b>Elimination</b><span>التخلص التام من مصدر الخطر</span></div>
+            <div class="pyramid-level level-2"><b>Substitution</b><span>استبدال المادة أو العملية بخيار أكثر أمانًا</span></div>
+            <div class="pyramid-level level-3"><b>Engineering Controls</b><span>عزل مصدر الخطر بالحواجز أو التهوية</span></div>
+            <div class="pyramid-level level-4"><b>Administrative Controls</b><span>تنظيم العمل والتدريب والمناوبات</span></div>
+            <div class="pyramid-level level-5"><b>PPE</b><span>خط الدفاع الأخير</span></div>
+          </div>
+          <div class="grid cards-2">
+            <article class="mini-card"><h4>التدخلات التصميمية</h4><p>الإزالة تمنع الخطر من بيئة العمل. الاستبدال يبدل المادة أو العملية بخيار أقل خطورة، مثل مواد تنظيف مائية بدل المذيبات العضوية القابلة للاشتعال.</p></article>
+            <article class="mini-card"><h4>التدخلات التشغيلية</h4><p>العزل الهندسي يشمل الحواجز والتهوية الموضعية LEV. والضوابط الإدارية تشمل تنظيم فترات التعرض، التدريب والمناوبات.</p></article>
+          </div>
+          <div class="key-note"><strong>لماذا PPE أخيرًا؟</strong> تعرض المحاضرة أن فعاليتها تعتمد على تدخل بشري مستمر، وأنها لا تلغي الخطر بل تقلل تعرض العامل للمخاطر المتبقية.</div>
+          <h4>اختيار معدات الوقاية من المصدر</h4>
+          <div class="grid cards-3">
+            <article class="mini-card"><h4>الرأس والعين</h4><p>Class G حتى 2,200 فولت، Class E حتى 20,000 فولت، وClass C حماية ميكانيكية فقط. نظارات السلامة للرش الجانبي، Goggles للسوائل الكيميائية والغبار، وFace Shield للحماية الأوسع.</p></article>
+            <article class="mini-card"><h4>التنفس والسمع</h4><p>N95 للجسيمات فقط وليس للغازات أو الأبخرة أو نقص الأكسجين. في IDLH تستخدم المحاضرة SCBA. مستوى إجراء برنامج الحفاظ على السمع 85 dBA على متوسط 8 ساعات.</p></article>
+            <article class="mini-card"><h4>القدم والجسم والقفازات</h4><p>أحذية Steel/Composite Toe لحماية الأصابع. اختيار القفاز حسب الخطر؛ للأحماض والقواعد القوية: نيتريل ثقيل أو نيوبرين.</p></article>
+          </div>
+          <div class="callout"><strong>الدفاع المدمج:</strong> مثال المحاضرة يعزل آلة 110 dB إلى 90 dB بالتحكم الهندسي، ثم تُضاف سدادات الأذن للوصول إلى أقل من 85 dB.</div>
+          <p class="source-note">مرجع الملخص: محاضرة 5، الشرائح 2-16.</p>
+        </section>
+
+        <section id="l6" class="lesson-page" role="tabpanel" aria-labelledby="tab-l6" hidden>
+          <div class="source-heading"><div><h3>محاضرة 6: المراجعة الشاملة</h3><p>تجمع المحاضرة مفاتيح الموضوعات السابقة في خريطة واحدة: التاريخ والتكلفة، المخاطر، التشريعات، التحكم، والاستجابة.</p></div><a class="source-button" href="sources/lecture-6.pdf" target="_blank" rel="noopener">فتح المحاضرة الأصلية</a></div>
+          <div class="grid cards-3">
+            <article class="mini-card"><h4>لماذا السلامة؟</h4><p>تربط المحاضرة بين كارثة مونونجاه وحريق ترايانجل ونشأة OSHA، وبين التكلفة المباشرة والخفية وعائد الوقاية.</p></article>
+            <article class="mini-card"><h4>كيف نحدد الخطر؟</h4><p>ابدأ بالـHazard ثم قيّم المخاطرة بالاحتمالية والشدة، وحدد نوع الخطر: كيميائي أو بيولوجي أو فيزيائي أو ميكانيكي أو إرجونوميكس.</p></article>
+            <article class="mini-card"><h4>كيف نتحكم؟</h4><p>اتبع الهرم من الإزالة إلى الاستبدال ثم الهندسي ثم الإداري ثم PPE.</p></article>
+          </div>
+          <div class="grid cards-2">
+            <article class="mini-card"><h4>المسؤولية والتشريع</h4><p>29 CFR ثم OSHA ثم الجزء المناسب، مع توازن مسؤوليات صاحب العمل والعامل، وأولوية التفتيش وتصنيف المخالفات.</p></article>
+            <article class="mini-card"><h4>التطبيق المتكامل</h4><p>تربط المحاضرة بين التحكم الهندسي، إدارة التعرض، الحواجز، وLOTO في الحالات التي تتضمن طاقة ومخاطر تشغيلية.</p></article>
+          </div>
+          <div class="notice"><strong>بنك الأسئلة:</strong> ملف الأسئلة المرفوع لا يضم مجموعة مستقلة للمحاضرة السادسة؛ لذلك لا يعرض الموقع أسئلة مصطنعة لها.</div>
+          <p class="source-note">مرجع الملخص: محاضرة 6، الشرائح 2-18.</p>
+        </section>
+
+        <section id="loto" class="lesson-page" role="tabpanel" aria-labelledby="tab-loto" hidden>
+          <div class="source-heading"><div><h3>LOTO: الإغلاق ووضع اللافتات وحماية الآلات</h3><p>العزل ليس مجرد إيقاف للمعدة؛ هو تسلسل يمنع الطاقة المخفية أو إعادة التشغيل أثناء العمل.</p></div><a class="source-button" href="sources/loto.pdf" target="_blank" rel="noopener">فتح المحاضرة الأصلية</a></div>
+          <div class="grid cards-2">
+            <article class="mini-card"><h4>لماذا نستخدم LOTO؟</h4><p>تذكر الشرائح أن نحو 10% من الإصابات البليغة ترتبط بالفشل في التحكم بمصادر الطاقة، وتعرض 120 وفاة و28,000 إصابة بليغة و50,000 يوم عمل مفقود سنويًا.</p></article>
+            <article class="mini-card"><h4>مصادر الطاقة</h4><p>كهربائية، هيدروليكية، ميكانيكية، حرارية، كيميائية، هوائية، وحركية. كما تعرض المحاضرة خطر التشغيل غير المقصود، والحركة، والطاقة المخفية.</p></article>
+          </div>
+          <div class="grid cards-2">
+            <article class="mini-card"><h4>Lock-Out</h4><p>عزل مادي وميكانيكي لمصدر الطاقة بأقفال. قاعدة المراجعة: قفل واحد، مفتاح واحد، شخص واحد.</p></article>
+            <article class="mini-card"><h4>Tag-Out</h4><p>لافتة تحذيرية أو رسالة معلوماتية تبين سبب خروج الآلة من الخدمة، لكنها لا توفر العزل المادي وحدها.</p></article>
+          </div>
+          <h4>مثلث المسؤولية</h4>
+          <div class="grid cards-3"><article class="mini-card"><h4>Site Manager</h4><p>يوقف المعدة بالطريقة المعتادة، يفصل الطاقة الأولية، ويضمن عدم وجود طاقة خطرة متبقية.</p></article><article class="mini-card"><h4>Authorized / Maintenance</h4><p>يفرغ الطاقة الكامنة والمخفية، يركب الأقفال، ويحتفظ بمفتاح شخصي واحد.</p></article><article class="mini-card"><h4>Safety Officer</h4><p>يراقب ويفتش للتأكد من التزام الجميع بإجراءات العزل الصحيحة.</p></article></div>
+          <h4>بروتوكول العزل</h4>
+          <div class="flow" dir="ltr"><span class="node">1 Stop</span><span class="arrow">→</span><span class="node">2 Isolate</span><span class="arrow">→</span><span class="node">3 Verify</span><span class="arrow">→</span><span class="node">4 Release stored energy</span><span class="arrow">→</span><span class="node">5 Lock</span><span class="arrow">→</span><span class="node">6 Tag</span></div>
+          <div class="callout callout-danger"><strong>Verify خطوة حرجة:</strong><p>محاولة تشغيل المعدة بعد العزل للتأكد أنها لا تعمل، ثم إعادة المفاتيح إلى OFF. ومن أمثلة تفريغ الطاقة: تفريغ مكثف أو تنفيس هواء أو ضغط محتجز.</p></div>
+          <div class="grid cards-2"><article class="mini-card"><h4>تغيير الوردية</h4><p>لا تزال الأقفال أو اللافتات إلا عند تبديلها بوضوح وفق القاعدة الصارمة وإثبات انتقال المسؤولية.</p></article><article class="mini-card"><h4>إعادة التشغيل</h4><p>إخلاء وتأمين المنطقة، إزالة الحواجز والأقفال بواسطة من ركبها، إعادة الطاقة، ثم التشغيل التجريبي.</p></article></div>
+          <div class="key-note"><strong>خطأ كارثي:</strong> الاعتماد على أن الآلة «متوقفة» مع إدخال اليد قبل تفريغ الضغط الهيدروليكي المحتجز.</div>
+          <p class="source-note">مرجع الملخص: محاضرة LOTO، الشرائح 2-15.</p>
+        </section>
+      </div>
+    </section>
+
+    <section class="view-panel" id="view-study" data-view-panel="study" aria-labelledby="studyTitle" hidden>
+      <div class="page-heading"><div><p class="eyebrow">تدريب بإجابات فورية</p><h2 id="studyTitle">وضع المذاكرة</h2><p class="muted">اختر مجموعة وأجب سؤالًا سؤالًا. يظهر التصحيح والإجابة من بنك الأسئلة، مع رابط للشرح والمحاضرة الأصلية.</p></div></div>
+      <div class="toolbar card"><label for="studySet">مجموعة الأسئلة</label><select id="studySet" class="control"></select><button type="button" id="startStudy" class="button button-primary">ابدأ المذاكرة</button></div>
+      <div id="studyRoot" class="stack" aria-live="polite"></div>
+    </section>
+
+    <section class="view-panel" id="view-quiz" data-view-panel="quiz" aria-labelledby="quizTitle" hidden>
+      <div class="page-heading"><div><p class="eyebrow">محاكاة اختبار</p><h2 id="quizTitle">وضع الاختبار</h2><p class="muted">صحح الإجابات في النهاية. خلط الأسئلة والاختيارات مفعّل، والمؤقت اختياري.</p></div></div>
+      <form id="quizSetup" class="card quiz-setup"><div class="form-grid"><label for="quizSet">مجموعة الاختبار</label><select id="quizSet" class="control"></select><label for="timerMinutes">المؤقت</label><select id="timerMinutes" class="control"><option value="0">بدون مؤقت</option><option value="15">15 دقيقة</option><option value="30">30 دقيقة</option><option value="45">45 دقيقة</option><option value="60">60 دقيقة</option></select></div><div class="check-row"><label><input id="shuffleQuestions" type="checkbox" checked> خلط ترتيب الأسئلة</label><label><input id="shuffleOptions" type="checkbox" checked> خلط ترتيب الاختيارات</label></div><button class="button button-primary" type="submit">ابدأ الاختبار</button></form>
+      <div id="quizRoot" class="stack" aria-live="polite"></div>
+    </section>
+
+    <section class="view-panel" id="view-library" data-view-panel="library" aria-labelledby="libraryTitle" hidden>
+      <div class="page-heading"><div><p class="eyebrow">بحث ومراجعة</p><h2 id="libraryTitle">بنك الأسئلة</h2><p class="muted">ابحث في نص السؤال والاختيارات، ثم صفِّ النتائج حسب المحاضرة وحالة الإجابة.</p></div></div>
+      <div class="card filter-panel"><label class="search-label" for="questionSearch">بحث</label><input id="questionSearch" class="control" type="search" placeholder="اكتب كلمة أو جزءًا من السؤال" autocomplete="off"><div class="filter-grid"><label for="bankFilter">المحاضرة</label><select id="bankFilter" class="control"></select><label for="statusFilter">الحالة</label><select id="statusFilter" class="control"><option value="all">كل الحالات</option><option value="unanswered">لم تُحل</option><option value="wrong">إجابة خاطئة</option><option value="correct">إجابة صحيحة</option></select></div><p id="searchCount" class="muted result-count" aria-live="polite"></p></div>
+      <div id="libraryRoot" class="question-list"></div>
+    </section>
+
+    <section class="view-panel" id="view-sources" data-view-panel="sources" aria-labelledby="sourcesTitle" hidden>
+      <div class="page-heading"><div><p class="eyebrow">المادة الأصلية</p><h2 id="sourcesTitle">ملفات المحاضرات</h2><p class="muted">الملفات المرفوعة مدرجة داخل الموقع حتى تبقى الرسوم والشرائح الأصلية متاحة بعد النشر.</p></div></div>
+      <div class="source-grid">
+        <a class="source-card" href="sources/lecture-1.pdf" target="_blank" rel="noopener"><span>01</span><h3>محاضرة 1</h3><p>التاريخ والتكلفة والمفاهيم الأساسية.</p></a>
+        <a class="source-card" href="sources/lecture-2.pdf" target="_blank" rel="noopener"><span>02</span><h3>محاضرة 2</h3><p>OSHA والتشريعات والمخالفات.</p></a>
+        <a class="source-card" href="sources/lecture-3.pdf" target="_blank" rel="noopener"><span>03</span><h3>محاضرة 3</h3><p>هندسة مكافحة الحرائق.</p></a>
+        <a class="source-card" href="sources/lecture-5.pdf" target="_blank" rel="noopener"><span>05</span><h3>محاضرة 5</h3><p>هرم التحكم وPPE.</p></a>
+        <a class="source-card" href="sources/lecture-6.pdf" target="_blank" rel="noopener"><span>06</span><h3>محاضرة 6</h3><p>المراجعة الشاملة.</p></a>
+        <a class="source-card" href="sources/loto.pdf" target="_blank" rel="noopener"><span>LOTO</span><h3>العزل والإغلاق</h3><p>حماية الآلات ومصادر الطاقة.</p></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span>المحتوى الدراسي مأخوذ من الملفات المرفوعة فقط.</span><div class="footer-tools"><button type="button" id="exportProgress" class="text-button">تصدير التقدم</button><button type="button" id="importProgress" class="text-button">استيراد التقدم</button><button type="button" id="resetProgress" class="text-button text-danger">مسح التقدم</button><input id="importFile" type="file" accept="application/json,.json" hidden></div></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
